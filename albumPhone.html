@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="albumPhone.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="col-12 d-md-none d-lg-none d-flex" id="firstContainer">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-10 d-flex justify-content-center align-items-center"
+            id="immagineAlbum"
+          >
+        
+        </div>
+          <h1 class="text-white ms-3" id="titoloAlbum">titolo prova</h1>
+          <div class="d-flex gap-3">
+            <img src="" alt="" id="immagineArtista" />
+            <p class="text-white" id="nomeArtista">Artista prova</p>
+          </div>
+          <div class="col d-flex">
+            <div class="col-6 d-flex ms-1 gap-3">
+              <button class="btn">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.503"
+                  height="20.625"
+                  viewBox="0 0 17.503 15.625"
+                >
+                  <path
+                    id="Fill"
+                    d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z"
+                    transform="translate(0 0)"
+                  ></path>
+                </svg>
+              </button>
+              <ion-icon name="download-outline" class="download"></ion-icon>
+              <div class="three-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              
+            </div>
+            <div class="col-6 d-flex align-items-end justify-content-end gap-3 me-1">
+              <ion-icon name="shuffle-outline" class="shuffle"></ion-icon>
+              <ion-icon name="play-circle" class="playCircle"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="albumPhone.js"></script>
+  </body>
+</html>
