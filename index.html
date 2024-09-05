@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Layout</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <div class="d-flex">
+          <button class="btn btn-dark me-2">Indietro</button>
+          <button class="btn btn-dark">Avanti</button>
+        </div>
+        <form class="d-flex ms-auto">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Cerca"
+            aria-label="Cerca"
+          />
+          <button class="btn btn-outline-light" type="submit">Cerca</button>
+        </form>
+        <div class="ms-3 d-flex align-items-center">
+          <img
+            src="https://via.placeholder.com/30"
+            alt="Profile"
+            class="rounded-circle"
+          />
+          <span class="text-white ms-2">Lidia Nautilus</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Layout delle colonne -->
+    <div class="container-fluid">
+      <div class="row full-height">
+        <!-- Colonna di sinistra (menu) -->
+        <div class="col-2 bg-dark text-white" id="sidebar">
+          <ul>
+            <li>Cerca</li>
+            <li>La tua libreria</li>
+            <li>Crea Playlist</li>
+            <li>Brani che ti piacciono</li>
+          </ul>
+        </div>
+
+        <!-- Colonna centrale (contenuto principale) -->
+        <div class="col-8 bg-light px-3" id="main-content">
+          <div class="content-header d-flex gap-3">
+            <div class="header-img"></div>
+            <div class="header-text d-flex flex-column gap-2 align-items-start">
+            <span>ALBUM </span>
+            <div class="d-flex flex-column align-items-start">
+                <h1>VIOLA (feat. Salmo)</h1>
+                <p>Fedez,Salmo</p>
+            </div>
+            <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+            <button id="headerPlayBtn" class="btn btn-success">Play</button>
+        </div>
+          </div>
+
+          <!-- Card vuote (saranno riempite con JS) -->
+          <div id="cardsRow" class="row mt-5">
+            
+          </div>
+        </div>
+
+        <!-- Colonna di destra (attività amici) -->
+        <div class="col-2 bg-secondary text-white" id="friend-activity">
+          <h5>Attività Amici</h5>
+          <ul>
+            <li>Amico 1</li>
+            <li>Amico 2</li>
+            <li>Amico 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
