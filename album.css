@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .full-height {
+    height: calc(100vh - 56px); /* Altezza totale meno la navbar */
+  }
+  
+  #sidebar, #main-content, #friend-activity {
+    height: 100%;
+    overflow-y: auto; 
+  }
+  
+  .navbar {
+    background-color: #181818;
+  }
+  
+  .navbar .btn {
+    background-color: #121212;
+    border: none;
+  }
+  
+  .navbar .btn:hover {
+    background-color: #333333;
+  }
+  
+  .navbar input[type="search"] {
+    background-color: #333333;
+    color: white;
+    border: none;
+  }
+  
+  .navbar input[type="search"]::placeholder {
+    color: #bbbbbb;
+  }
+  
+  .navbar .form-control:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .navbar .btn-outline-light {
+    border-color: #1DB954;
+  }
+  
+  .navbar .btn-outline-light:hover {
+    background-color: #1DB954;
+    border-color: #1DB954;
+  }
+  
+  .navbar .rounded-circle {
+    width: 30px;
+    height: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  .content-header {
+    padding: 20px;
+    background-color: rgb(26, 26, 25);
+    color: white;
+    
+  }
+  
+
+
+
+  
+  .bg-dark {
+    background-color: #121212 !important;
+  }
+  
+  .bg-light {
+    background-color: #ffffff !important;
+  }
+  
+  .bg-secondary {
+    background-color: #222222 !important;
+  }
+  
