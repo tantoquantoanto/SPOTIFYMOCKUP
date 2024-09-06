@@ -1,9 +1,12 @@
 const endpoint = "https://striveschool-api.herokuapp.com/api/deezer/album/";
-
+const contentHeader = document.querySelector(".content-header");
 const headerImg = document.querySelector(".header-img");
 const headerTitle = document.querySelector("#header-title");
 const headerArtist = document.querySelector(".header-artist");
 const headerPlayBtn = document.querySelector("#headerPlayBtn");
+const trackList = document.querySelector("#trackList");
+trackList.classList.add("list-unstyled", "d-flex" ,"flex-column", "gap-1", "bg-dark")
+
 
 const url = new URLSearchParams(location.search);
 const id = url.get("id");
@@ -21,6 +24,7 @@ if (!id) {
 
      
       console.log("Dati ricevuti:", data);
+      console.log(data.tracks.data);
 
     
       populateCard(data);
@@ -31,13 +35,30 @@ if (!id) {
 
   const populateCard = (data) => {
     
-    headerImg.style.backgroundImage = `url(${data.cover_medium})`;
-
-   
-    headerTitle.textContent = data.title;
-    headerArtist.textContent = data.artist.name;
+    contentHeader.style.backgroundImage = `url(${data.cover_medium})`;
+    contentHeader.style.backgroundSize = "cover";
+    contentHeader.style.backgroundPosition = "center";
 
   
+    headerTitle.textContent = data.title;
+    headerArtist.textContent = data.artist.name;
+    data.tracks.data.forEach (track => {
+        const li = document.createElement("li");
+        const div = document.createElement("div");
+        div.classList.add("d-flex", "flex-column", "align-items-start", "justify-content-center");
+        const h5 = document.createElement("h5");
+        h5.textContent = track.title;
+        const span = document.createElement("span");
+        span.textContent = track.artist.name;
+        div.append(h5, span);
+        li.append(div);
+        trackList.appendChild(li);
+        
+
+
+    })
+
+    
     headerPlayBtn.addEventListener("click", () => {
       const audio = new Audio(data.tracks.data[0].preview); 
       audio.play();
@@ -46,3 +67,6 @@ if (!id) {
 
   getAlbum();
 }
+
+
+  

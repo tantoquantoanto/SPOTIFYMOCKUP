@@ -6,7 +6,7 @@ html, body {
   }
   
   .full-height {
-    height: calc(100vh - 56px); /* Altezza totale meno la navbar */
+    height: calc(100vh - 56px);
   }
   
   #sidebar, #main-content, #friend-activity {
